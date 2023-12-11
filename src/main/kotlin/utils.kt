@@ -23,3 +23,8 @@ fun Any.println() = println(this)
 fun String.capitalized(
     locale: Locale = Locale.getDefault(),
 ): String = replaceFirstChar { if (it.isLowerCase()) it.titlecase(locale) else it.toString() }
+
+fun <S, T> List<S>.cartesianProduct(other : List<T>) : List<Pair<S, T>> =
+    this.flatMap { s ->
+        List(other.size) { s }.zip(other)
+    }

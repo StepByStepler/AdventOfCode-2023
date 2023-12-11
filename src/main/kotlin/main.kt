@@ -1,5 +1,5 @@
 package me.stepbystep
 
 fun main() {
-    day10Part2()
+    day11Part2()
 }
